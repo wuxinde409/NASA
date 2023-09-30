@@ -22,7 +22,7 @@ import {
         <MDBCardText>
           {description}
         </MDBCardText>
-        <MDBBtn href='#'>Button</MDBBtn>
+        <MDBBtn href='#'>Checkout</MDBBtn>
       </MDBCardBody>
     </MDBCard>
     )

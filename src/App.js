@@ -25,41 +25,41 @@ function App() {
     <h1 className='pt-3 pb-3'>Browse the planet you wish to visit</h1>
       <div className='pt-3 pb-3' style={{ display: 'flex', justifyContent: 'space-between' }}>
         <Cards 
-          image = "./images/jupiter.jpg"
-          title="Jupiter"
-          description="Go to Jupiter"
+          image = "./images/Moon.jpg"
+          title="Moon"
+          description="Go to Moon"
         />
-        <Cards 
-          image = "./images/mars.jpg"
-          title="Mars"
-          description="Go to Mars"
-        />
-        <Cards 
-          image = "./images/neptune.jpg"
-          title="Neptune"
-          description="Go to Neptune  "
-        />
-        <Cards 
-          image = "./images/saturn.jpg"
-          title="Saturn"
-          description="Go to Saturn"
-        />
-      </div>
-      <div className='pt-3 pb-3' style={{ display: 'flex', justifyContent: 'space-between' }}>
         <Cards 
           image = "./images/venus.jpg"
           title="Venus"
           description="Go to Venus"
         />
         <Cards 
-          image = "./images/mars.jpg"
-          title="Mars"
-          description="Go to Mars"
+          image = "./images/jupiter.jpg"
+          title="Jupiter"
+          description="Go to Jupiter  "
         />
         <Cards 
           image = "./images/mars.jpg"
           title="Mars"
           description="Go to Mars"
+        />
+      </div>
+      <div className='pt-3 pb-3' style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <Cards 
+          image = "./images/neputune.jpg"
+          title="Neputune"
+          description="Go to Neputune"
+        />
+        <Cards 
+          image = "./images/uranus.jpg"
+          title="Uranus"
+          description="Go to Uranus"
+        />
+        <Cards 
+          image = "./images/saturn.jpg"
+          title="Saturn"
+          description="Go to Saturn"
         />
         <Cards 
           image = "./images/mars.jpg"
