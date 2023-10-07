@@ -1,8 +1,8 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from 'react-router-dom';
-import Home from './Home';
-import Moon from './planets/moon';
+import Home from './Home.js';
+import Moon from './planets/moon.js';
 function App() {
   return (
     <div>

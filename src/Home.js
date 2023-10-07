@@ -1,6 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cards from './cards'
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -23,6 +24,7 @@ function Home() {
     
     <div className="container">
     <h1 className='pt-3 pb-3'>Browse the planet you wish to visit</h1>
+    
       <div className='pt-3 pb-3' style={{ display: 'flex', justifyContent: 'space-between' }}>
         <Cards 
           image = "https://images.unsplash.com/photo-1639382575211-e1959050f0fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80"
