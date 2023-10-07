@@ -7,8 +7,10 @@ import {
     MDBBtn,
     MDBRipple
   } from 'mdb-react-ui-kit';
+  import { useNavigate} from 'react-router-dom';
 
   function Cards ({image,title,description}){
+    const navigate = useNavigate()
     return(
         <MDBCard style={{ width: '300px', height: '450px' }}>
       <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
@@ -22,7 +24,7 @@ import {
         <MDBCardText>
           {description}
         </MDBCardText>
-        <MDBBtn href='#'>Checkout</MDBBtn>
+        <MDBBtn onClick={navigate('/Moon')}>Checkout</MDBBtn>
       </MDBCardBody>
     </MDBCard>
     )
