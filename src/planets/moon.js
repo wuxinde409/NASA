@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
-
+import Marsmodel from '../marsmodel';
+import * as THREE from "three";
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
 function Moon(){
     
     return(
+
         <div>
-            <h1>
-                to the Moon!
-            </h1>
-            <Link to="/">Home</Link>
+            <Marsmodel></Marsmodel>
         </div>
     )
 }
