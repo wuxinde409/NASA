@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
 import SceneInit from './lib/SceneInit.js';
 import { useEffect } from "react";
+
 import {
   sinWaveVertexShader2,
   sinWaveVertexShader,
@@ -13,18 +14,28 @@ import {
 
 export default function Marsmodel() {
   useEffect(() => {
+    //關閉fps偵測
     const test = new SceneInit("myThreeJsCanvas");
     test.initScene();
     test.animate();
+    const textureLoader = new THREE.TextureLoader();
 
-    // test.scene.scale.x = 2.0;
-    // test.scene.scale.y = 2.0;
-    // test.scene.scale.z = 2.0;
+    // const handTexture = textureLoader.load('mars.jpg');
+    // const handMaterial = new THREE.MeshStandardMaterial({ map: handTexture });
+
 
     const loader = new OBJLoader();
     loader.load(
       "./hand.obj",
       function (obj) {
+
+
+        // obj.traverse(function (child) {
+        //   if (child instanceof THREE.Mesh) {
+        //     child.material = handMaterial;
+        //   }
+        // });
+
         obj.scale.x = 4;
         obj.scale.y = 4;
         obj.scale.z = 4;
@@ -42,11 +53,18 @@ export default function Marsmodel() {
         console.log("An error happened");
       }
     );
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    test.scene.add(ambientLight);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+    directionalLight.position.set(1, 1, 1);
+    test.scene.add(directionalLight);
 
 
-    const textureLoader = new THREE.TextureLoader();
+//處理火星的obj 顏色
+    
     const texture = textureLoader.load('mars.jpg');
     const material = new THREE.MeshBasicMaterial({ map: texture });
+
 
 
 
@@ -154,7 +172,7 @@ export default function Marsmodel() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <canvas id="myThreeJsCanvas"></canvas>
+      <canvas id="myThreeJsCanvas" ></canvas>
     </div>
   );
 }
