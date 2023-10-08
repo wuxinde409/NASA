@@ -71,7 +71,7 @@ export default function Earthmodel() {
     const loader1 = new OBJLoader();
     // loader1.setMaterials(materials);
     loader1.load(
-      "./earth.obj",
+      "./mars.obj",
       function (obj) {
         obj.traverse(function (child) {
           if (child instanceof THREE.Mesh) {
@@ -90,7 +90,7 @@ export default function Earthmodel() {
         console.log("An error happened");
       }
     );
-
+    
 
     const boxGeometry = new THREE.BoxGeometry(0.5, 0.5, 36, 4, 4, 16);
     // const boxGeometry = new THREE.BoxGeometry(4, 4, 36, 1, 1, 16);
